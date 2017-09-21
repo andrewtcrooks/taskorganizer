@@ -1,10 +1,10 @@
-from django.forms import ModelForm
-from todolist.data.models import User
+from django import forms
+from todolist.data.models import User, Todo
 
 
 app_name = 'todolist.app'
 
-class SignupForm(ModelForm):
+class SignupForm(forms.ModelForm):
     class Meta:
-        model = User
-        exclude = ()
+        model=User
+        fields = '__all__'

@@ -1,6 +1,7 @@
 from django.conf.urls import url
+from django.contrib.staticfiles.urls import static, staticfiles_urlpatterns
 from .views import home, todo
-
+from config import settings
 
 urlpatterns = [
     url(r'^$', home.main_page),
@@ -12,3 +13,6 @@ urlpatterns = [
     url(r'^delete-todo/(?P<todo_id>\d+)$', todo.delete_todo),
     # ... your url patterns
 ]
+
+urlpatterns += staticfiles_urlpatterns()
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
