@@ -11,7 +11,8 @@
         </ul>
 
         <div class="navbar-right">
-            <img src="./static/media/default.png" width="32" style="vertical-align:middle;">&nbsp;<a>{{fname}}</a>&nbsp;|&nbsp;<a class="link" href="/logout">Logout</a>
+            {% load static %}
+            <img src="{% static "default.png" %}" width="32" style="vertical-align:middle;">&nbsp;<a>{{fname}}</a>&nbsp;|&nbsp;<a class="link" href="/logout">Logout</a>
         </div>
 
 

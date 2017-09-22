@@ -15,11 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-import os.path
+
 
 admin.autodiscover()
-
-#site_media = os.path.join(os.path.dirname(__file__), 'site_media')
 
 urlpatterns = [
     url(r'^', include('tasklist.app.urls')),
