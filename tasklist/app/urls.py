@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from django.contrib.staticfiles.urls import static, staticfiles_urlpatterns
-from .views import home, todo
+from .views import home, task
 from config import settings
 
 urlpatterns = [
@@ -8,9 +8,9 @@ urlpatterns = [
     url(r'^signup$', home.signup),
     url(r'^login$', home.login),
     url(r'^logout$', home.logout),
-    url(r'^add-todo$', todo.add_todo),
-    url(r'^edit-todo/(?P<todo_id>\d+)$', todo.edit_todo),
-    url(r'^delete-todo/(?P<todo_id>\d+)$', todo.delete_todo),
+    url(r'^add-task$', task.add_task),
+    url(r'^edit-task/(?P<task_id>\d+)$', task.edit_task),
+    url(r'^delete-task/(?P<task_id>\d+)$', task.delete_task),
     # ... your url patterns
 ]
 

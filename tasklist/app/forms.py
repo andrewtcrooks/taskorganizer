@@ -1,8 +1,8 @@
 from django import forms
-from todolist.data.models import User, Todo
+from .models import User
 
 
-app_name = 'todolist.app'
+app_name = 'tasklist.app'
 
 class SignupForm(forms.ModelForm):
     class Meta:

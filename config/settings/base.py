@@ -39,8 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'todolist.app',
-    'todolist.data',
+    'tasklist.app',
 ]
 
 MIDDLEWARE = [
@@ -76,16 +75,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = os.path.join(BASE_DIR, 'todolist/static/')
+STATIC_URL = os.path.join(BASE_DIR, 'tasklist/static/')
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'todolist/media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'tasklist/media/')
 MEDIA_URL = 'static/media/'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR,  'todolist/templates/'),
+            os.path.join(BASE_DIR, 'tasklist/templates/'),
         ],
         'OPTIONS': {
             'context_processors': [

@@ -22,7 +22,7 @@ admin.autodiscover()
 #site_media = os.path.join(os.path.dirname(__file__), 'site_media')
 
 urlpatterns = [
-    url(r'^', include('todolist.app.urls')),
+    url(r'^', include('tasklist.app.urls')),
     url(r'^admin/', admin.site.urls),
 
     # ... your url patterns

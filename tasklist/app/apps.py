@@ -1,12 +1,12 @@
 from django.apps import AppConfig
 
 
-app_name = 'todolist.data'
+app_name = 'tasklist.app'
 
 class UserConfig(AppConfig):
     name = 'user'
     verbose_name = "User"
 
-class TodoConfig(AppConfig):
-    name = 'todo'
-    verbose_name = "Todo"
+class TaskConfig(AppConfig):
+    name = 'task'
+    verbose_name = "Task"

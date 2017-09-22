@@ -1,0 +1,23 @@
+{%extends "base.html"%}
+{%block title %}Add | {{fname}}{% endblock %}
+{%block content%}
+    <div class="mid">
+
+        <div ><b>{{fname}}</b>&nbsp;|&nbsp;<a class="link" href="/logout">Logout</a></div>
+        <br />
+        <h1>Edit Task</h1>
+        <br />
+        <br />
+        
+        <form action="" method="post">
+
+            <label>Job</label>
+            <textarea name="job" required>{{task.task_job}}</textarea>
+            <input type="hidden" name="id" value="{{task.id}}">
+            <div class='add'>
+                <input type="submit" value="Add">
+            </div>
+            {%csrf_token%}
+        </form>
+    </div>
+{% endblock %}

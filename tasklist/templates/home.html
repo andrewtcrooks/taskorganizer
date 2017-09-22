@@ -1,0 +1,62 @@
+{%extends "base.html" %}
+{%block title %}{{fname}}{% endblock %}
+{%block content %}
+    <div class="mid">
+        <h1>
+            Task List
+        </h1>
+        <ul>
+            <li>Complete:   {{ complete_items }}</li>
+            <li>Incomplete: {{ incomplete_items }}</li>
+        </ul>
+
+        <div class="navbar-right">
+            <img src="./static/media/default.png" width="32" style="vertical-align:middle;">&nbsp;<a>{{fname}}</a>&nbsp;|&nbsp;<a class="link" href="/logout">Logout</a>
+        </div>
+
+
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <a class="link" href="/add-task">Add Task</a>
+
+        <form action="" method="post">
+            <table width="100%" cellpadding="5">
+                {# Define top bar #}
+                <tr>
+                    <td width="5%">Done</td>
+                    <td width="70%">Task</td>
+                    <td width="9%">&nbsp;</td>
+                </tr>
+
+                {# Define rows #}
+                {%for row in task%}
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="complete" value="{{ row.id }}" {% if row.complete %} checked {% endif %} >
+                        </td>
+                        <td>
+                            {{ row.task_job }}
+                        </td>
+                        <td>
+                            <div class="edit_del">
+                                <a class="link" href="/edit-task/{{ row.id }}">Edit</a>&nbsp;|&nbsp;<a class="link" href="/delete-task/{{ row.id }}">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                {%endfor%}
+
+
+            </table>
+            {# Define submit button #}
+            <div class='submit'>
+                <input type='submit' name="Submit" value="Submit">
+            </div>
+            {% csrf_token %}
+        </form>
+
+
+    </div>
+{% endblock %}
