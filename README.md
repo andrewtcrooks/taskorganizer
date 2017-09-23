@@ -106,7 +106,7 @@ python manage.py migrate --settings==config.settings.local
 
 ## Built With
 
-* [Django](https://docs.djangoproject.com/en/1.11/) - The web framework used
+* [Django](https://docs.djangoproject.com/en/1.11/) - web framework
 
 ## Authors
 
