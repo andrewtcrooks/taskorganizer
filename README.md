@@ -5,9 +5,13 @@ Simple task list written in django
 
 ## Screenshots
 
-![Sign-in/Login](/screenshot1.jpg?raw=true "Optional Title")
+![Sign-in/Login](/screenshot1.jpg?raw=true "Sign-in/Login")
 
-![Task List](/screenshot2.jpg?raw=true "Optional Title")
+![Task List](/screenshot2.jpg?raw=true "Task List")
+
+![Add Task](/screenshot3.jpg?raw=true "Add Task")
+
+![Edit Task](/screenshot4.jpg?raw=true "Edit Task")
 
 
 ## Getting Started
