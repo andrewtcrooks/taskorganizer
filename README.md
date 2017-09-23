@@ -3,9 +3,11 @@
 Simple task list written in django
 
 
-## Screenshot
+## Screenshots
 
-![Task Organizer Screenshot](/screenshot.jpg?raw=true "Optional Title")
+![Sign-in/Login](/screenshot1.jpg?raw=true "Optional Title")
+
+![Task List](/screenshot2.jpg?raw=true "Optional Title")
 
 
 ## Getting Started
