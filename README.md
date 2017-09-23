@@ -110,7 +110,7 @@ python manage.py migrate --settings==config.settings.local
 
 ## Authors
 
-* **Andrew Crooks** - [Github](https://github.com/andrewtcrooks)
+* **Andrew T. Crooks** - [Github](https://github.com/andrewtcrooks)
 
 ## License
 
