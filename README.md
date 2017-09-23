@@ -2,65 +2,110 @@
 
 Simple task list written in django
 
+
+## Screenshot
+
+![Task Organizer Screenshot](/screenshot.jpg?raw=true "Optional Title")
+
+
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
+Python dependancies
 ```
-certifi==2017.7.27.1
+Python==3.6.2
 Django==1.11.5
-olefile==0.44
 Pillow==4.2.1
 psycopg2==2.7.3.1
-pytz==2017.2
-sqlparse==0.2.3
+```
+
+
+
+
+Additional requirements
+```
+1. A locally served PostgreSQL database. I used the Postgres.app on my Mac but any postgresql server should be fine.
+
+2. Web browser open to http://127.0.0.1:8000
+```
+
+
+Optional requirements (goes with PostgreSQL database reset example below)
+If you use Postgres.app on Mac, add the following lines to your .bashrc or .profile to enable CLI tools for the PostgreSQL database
+```
+# add CLI tools for PostGRESQL
+export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 ```
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
+After copying the repo you will need to create two files
 
-Say what the step will be
-
+Create local.py in settings directory (/taskorganizer/config/settings) with the following code and replace name_of_postgresql_db with the name of your PostgreSQL database
 ```
-Give the example
-```
+from .base import *
 
-And repeat
 
-```
-until finished
-```
+DEBUG = True
 
-End with an example of getting some data out of the system or using it for a little demo
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'name_of_postgresql_db',
+        'HOST': 'localhost',
+    } }
 
-## Running the tests
 
-Explain how to run the automated tests for this system
+INSTALLED_APPS += ['debug_toolbar',
+                   ]
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
+MIDDLEWARE += ['debug_toolbar.middleware.DebugToolbarMiddleware',]
 ```
 
-### And coding style tests
+Create secrets.json in root directory (/taskorganizer/) with the following code and replace your_key_here with a secret key that only you will know
+```
+{
+  "FILENAME": "secrets.json",
+  "SECRET_KEY": "your_key_here",
+  "DATABASES_HOST": "127.0.0.1",
+  "PORT": "5432"
+}
+```
 
-Explain what these tests test and why
+For version control, make sure local.py and secrets.json are listed in your .gitignore file
+
+Start the app on a local server by running the following code in a terminal and view at http://127.0.0.1:8000
 
 ```
-Give an example
+cd ~/taskorganizer          # cd to wherever you put the repo locally
+python manage.py runserver 8000 --settings=config.settings.local
 ```
 
-## Deployment
+You should now have a running version of the app!
 
-Add additional notes about how to deploy this on a live system
+Try adding/editing/deleting tasks and enjoy
+
+
+### Resetting
+
+Whenever you change the model you will need to first reset the database and then redo the migrations
+
+To reset the database, run the following code in a terminal and replace db_name with the name of your PostgreSQL database
+```
+dropdb name_of_postgresql_db
+create name_of_postgresql_db
+```
+
+To redo the migrations, delete the 0001_initial.py file in the /tasklist/app/migrations folder and run the following code in a terminal
+```
+python manage.py makemigrations --settings==config.settings.local
+
+python manage.py migrate --settings==config.settings.local
+```
+
 
 ## Built With
 
@@ -68,26 +113,12 @@ Add additional notes about how to deploy this on a live system
 * [Psychopg2](http://initd.org/) - Python PostgreSQL API
 * [Pillow](https://python-pillow.org/) - Python imaging library
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
 ## Authors
 
-* **Andrew Crooks** - *Initial work* - [Github](https://github.com/andrewtcrooks)
-
+* **Andrew Crooks** - [Github](https://github.com/andrewtcrooks)
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
 
