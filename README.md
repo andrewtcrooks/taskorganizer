@@ -18,8 +18,6 @@ Python dependancies
 ```
 Python==3.6.2
 Django==1.11.5
-Pillow==4.2.1
-psycopg2==2.7.3.1
 ```
 
 
@@ -102,7 +100,6 @@ create name_of_postgresql_db
 To redo the migrations, delete the 0001_initial.py file in the /tasklist/app/migrations folder and run the following code in a terminal
 ```
 python manage.py makemigrations --settings==config.settings.local
-
 python manage.py migrate --settings==config.settings.local
 ```
 
@@ -110,8 +107,6 @@ python manage.py migrate --settings==config.settings.local
 ## Built With
 
 * [Django](https://docs.djangoproject.com/en/1.11/) - The web framework used
-* [Psychopg2](http://initd.org/) - Python PostgreSQL API
-* [Pillow](https://python-pillow.org/) - Python imaging library
 
 ## Authors
 
