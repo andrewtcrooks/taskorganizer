@@ -14,13 +14,13 @@ Simple task list written in django
 
 ## Screenshots
 
-![Sign-in/Login]({attach}screenshot1.jpg?raw=true "Sign-in/Login")
+![Sign-in/Login](screenshot1.jpg?raw=true "Sign-in/Login")
 
-![Task List]({attach}screenshot2.jpg?raw=true "Task List")
+![Task List](screenshot2.jpg?raw=true "Task List")
 
-![Add Task]({attach}screenshot3.jpg?raw=true "Add Task")
+![Add Task](screenshot3.jpg?raw=true "Add Task")
 
-![Edit Task]({attach}screenshot4.jpg?raw=true "Edit Task")
+![Edit Task](screenshot4.jpg?raw=true "Edit Task")
 
 
 ## Getting Started
