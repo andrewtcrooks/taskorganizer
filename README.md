@@ -1,3 +1,12 @@
+Title: Task Organizer web app
+Slug: taskorganizer
+Date: 2017-09-22
+Category: tutorials
+Tags: django, django1.11, python, python3, postgresql
+Author: Andrew C.
+Summary: Example of a checklist web app in django
+
+
 # Task Organizer
 
 Simple task list written in django
@@ -5,13 +14,13 @@ Simple task list written in django
 
 ## Screenshots
 
-![Sign-in/Login](/screenshot1.jpg?raw=true "Sign-in/Login")
+![Sign-in/Login]({attach}screenshot1.jpg?raw=true "Sign-in/Login")
 
-![Task List](/screenshot2.jpg?raw=true "Task List")
+![Task List]({attach}screenshot2.jpg?raw=true "Task List")
 
-![Add Task](/screenshot3.jpg?raw=true "Add Task")
+![Add Task]({attach}screenshot3.jpg?raw=true "Add Task")
 
-![Edit Task](/screenshot4.jpg?raw=true "Edit Task")
+![Edit Task]({attach}screenshot4.jpg?raw=true "Edit Task")
 
 
 ## Getting Started
@@ -31,7 +40,8 @@ Django==1.11.5
 
 Additional requirements
 ```
-1. A locally served PostgreSQL database. I used the Postgres.app on my Mac but any postgresql server should be fine.
+1. A locally served PostgreSQL database. I used the Postgres.app on my Mac but 
+   any postgresql server should be fine.
 
 2. Web browser open to http://127.0.0.1:8000
 ```
