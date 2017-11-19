@@ -14,6 +14,9 @@ Simple task list written in django
 
 ## Screenshots
 
+<!--adding {attach} like this ({attach}screenshot*.jpg) -->
+
+
 ![Sign-in/Login](screenshot1.jpg?raw=true "Sign-in/Login")
 
 ![Task List](screenshot2.jpg?raw=true "Task List")
