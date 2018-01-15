@@ -1,12 +1,3 @@
-Title: Task Organizer Django Web App
-Slug: taskorganizer
-Date: 2017-09-22
-Category: example_code
-Tags: django, django1.11, python, python3, postgresql
-Author: Andrew C.
-Summary: Example of a checklist web app in django
-
-
 # Task Organizer
 
 Simple task list written in django
