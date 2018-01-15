@@ -1,8 +1,11 @@
 language: python
 
 python:
-  - "3.6"
   - "2.7"
+  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.6"
 
 services: 
   - sqlite
@@ -10,10 +13,61 @@ services:
   - mysql
 
 env:
+  - DJANGO=1.8 DB=sqlite
+  - DJANGO=1.8 DB=postgres
+  - DJANGO=1.8 DB=mysql
+  - DJANGO=1.9 DB=sqlite
+  - DJANGO=1.9 DB=postgres
+  - DJANGO=1.9 DB=mysql
+  - DJANGO=1.10 DB=sqlite
+  - DJANGO=1.10 DB=postgres
+  - DJANGO=1.10 DB=mysql
   - DJANGO=1.11 DB=sqlite
   - DJANGO=1.11 DB=postgres
   - DJANGO=1.11 DB=mysql
-  
+
+matrix:
+  exclude:
+    - python: "3.6"
+      env: DJANGO=1.8 DB=sqlite
+    - python: "3.6"
+      env: DJANGO=1.8 DB=mysql
+    - python: "3.6"
+      env: DJANGO=1.8 DB=postgres
+
+    - python: "3.3"
+      env: DJANGO=1.9 DB=sqlite
+    - python: "3.3"
+      env: DJANGO=1.9 DB=mysql
+    - python: "3.3"
+      env: DJANGO=1.9 DB=postgres
+    - python: "3.6"
+      env: DJANGO=1.9 DB=sqlite
+    - python: "3.6"
+      env: DJANGO=1.9 DB=mysql
+    - python: "3.6"
+      env: DJANGO=1.9 DB=postgres
+
+    - python: "3.3"
+      env: DJANGO=1.10 DB=sqlite
+    - python: "3.3"
+      env: DJANGO=1.10 DB=postgres
+    - python: "3.3"
+      env: DJANGO=1.10 DB=mysql
+    - python: "3.6"
+      env: DJANGO=1.10 DB=sqlite
+    - python: "3.6"
+      env: DJANGO=1.10 DB=postgres
+    - python: "3.6"
+      env: DJANGO=1.10 DB=mysql
+
+    - python: "3.3"
+      env: DJANGO=1.11 DB=sqlite
+    - python: "3.3"
+      env: DJANGO=1.11 DB=postgres
+    - python: "3.3"
+      env: DJANGO=1.11 DB=mysql
+
 install:
   - pip install -r requirements.txt
 
