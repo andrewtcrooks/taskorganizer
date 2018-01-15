@@ -1,5 +1,38 @@
 language: python
+
 python:
-  - '3.6'
-  - '2.7'
+  - "3.6"
+  - "2.7"
+
+services: 
+  - sqlite
+  - postgres
+  - mysql
+
+env:
+  - DJANGO=1.11 DB=sqlite
+  - DJANGO=1.11 DB=postgres
+  - DJANGO=1.11 DB=mysql
   
+install:
+  - pip install -r requirements.txt
+
+before_script:
+  - mysql -e 'create database test;' -u root
+
+script:
+  - python manage.py test
+
+# deploy:
+#   provider: pages
+#   local_dir: "./output"
+#   skip_cleanup: true
+#   github_token: $GH_TOKEN # Set in travis-ci.org dashboard
+#   target_branch: 
+#   on:
+#     branch: master
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change
