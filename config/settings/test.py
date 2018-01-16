@@ -1,5 +1,6 @@
 """taskorganizer.config.settings.test ."""
 from .base import *
+import json
 
 # JSON-based secrets module
 with open('test_secrets.json') as f:
