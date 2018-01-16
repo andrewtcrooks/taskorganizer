@@ -1,4 +1,9 @@
-# Task Organizer
+[![Build Status](https://travis-ci.org/andrewtcrooks/taskorganizer.svg?branch=master)](https://travis-ci.org/andrewtcrooks/taskorganizer)
+
+[![Coverage Status](https://coveralls.io/repos/github/andrewtcrooks/taskorganizer/badge.svg?branch=master)](https://coveralls.io/github/andrewtcrooks/taskorganizer?branch=master)
+
+
+ # Task Organizer
 
 Simple task list written in django
 
