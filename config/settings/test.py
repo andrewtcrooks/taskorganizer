@@ -1,5 +1,5 @@
-"""taskorganizer.config.settings.base."""
-# settings/base.py
+"""taskorganizer.config.settings.test ."""
+# settings/test.py
 import os
 import json
 
