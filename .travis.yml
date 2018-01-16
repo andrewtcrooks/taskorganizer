@@ -43,7 +43,7 @@ matrix:
 
 before_install:
   - pip install -q 'flake8<3'
-  - flake8 taskorganizer
+  - PYFLAKES_NODOCTEST=1 flake8 tasklist
 
 install:
   # - pip install -r requirements.txt
