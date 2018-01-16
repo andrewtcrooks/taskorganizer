@@ -65,7 +65,7 @@ script:
   # - python manage.py test tests/ --pattern="tests_*.py"
   # - django-admin.py --version
   - tox
-  # - coverage run --source=taskorganizer -m py.test
+  - coverage run --source=tasklist -m ./tests/test_*
   # - coverage report -m
 
 after_success:
