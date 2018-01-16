@@ -1,4 +1,3 @@
-"""travis.py ."""
 import sys
 
 version = sys.argv[1]
