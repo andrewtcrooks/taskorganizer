@@ -9,7 +9,7 @@ python:
 
 services: 
   # - sqlite
-  - postgres
+  - postgresql
   - mysql
 
 env:
@@ -59,7 +59,7 @@ install:
 
 before_script:
   # - mysql -e 'create database test;' -u root
-  - mysql -e 'create database taskorganizer;' -u root
+  - mysql -e 'create database taskorganizer;'
   - psql -c 'create database taskorganizer;' -U admin
 
 script:
