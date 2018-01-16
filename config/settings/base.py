@@ -1,20 +1,23 @@
+"""taskorganizer.config.settings.base."""
 # settings/base.py
 import os
 import json
-
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Normally you should not import ANYTHING from Django directly
 #  into your settings, but ImproperlyConfigured is an exception.
 from django.core.exceptions import ImproperlyConfigured
 
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = os.path.dirname(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 # JSON-based secrets module
 with open('secrets.json') as f:
     secrets = json.loads(f.read())
 
+
 def get_secret(setting, secrets=secrets):
-    '''Get the secret variable or return explicit exception.'''
+    """Get the secret variable or return explicit exception."""
     try:
         return secrets[setting]
     except KeyError:
@@ -56,8 +59,6 @@ ROOT_URLCONF = 'config.urls'
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
@@ -79,8 +80,8 @@ STATIC_ROOT = ''
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'tasklist/static'),)
 
-#MEDIA_ROOT = os.path.join(BASE_DIR, 'tasklist/static/')
-#MEDIA_URL = 'static/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'tasklist/static/')
+# MEDIA_URL = 'static/media/'
 
 TEMPLATES = [
     {
