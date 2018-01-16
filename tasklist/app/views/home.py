@@ -43,7 +43,7 @@ def main_page(request):
 
 
 def signup(request):
-    """Sign-up view."""
+    """Signup view."""
     if request.method == 'POST':
         form = SignupForm(request.POST)
         if form.is_valid():
