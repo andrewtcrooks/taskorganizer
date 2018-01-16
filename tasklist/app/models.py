@@ -23,4 +23,4 @@ class Task(models.Model):
 
     task_job = models.TextField()
     complete = models.BooleanField(default=False)
-    user = models.ForeignKey('User')
+    user = models.ForeignKey('User', on_delete=models.CASCADE,)
