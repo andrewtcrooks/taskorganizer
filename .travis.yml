@@ -67,7 +67,7 @@ script:
   # - django-admin.py --version
   - tox
   # - coverage run --source=tasklist -m py.test
-  - coverage run --source='.' manage.py test taskorganizer
+  - coverage run --source='.' manage.py test tasklist
   - coverage report -m
 
 after_success:
