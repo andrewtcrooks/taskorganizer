@@ -58,11 +58,11 @@ install:
 
 before_script:
   # - mysql -e 'create database test;' -u root
-  - mysql -e 'create database taskorganizer;' -u admin
+  - mysql -e 'create database taskorganizer;' -u root
   - psql -c 'create database taskorganizer;' -U admin
 
 script:
-  - python manage.py test tests/ --pattern="tests_*.py"
+  # - python manage.py test tests/ --pattern="tests_*.py"
   # - django-admin.py --version
   - tox
   # - coverage run --source=taskorganizer -m py.test
