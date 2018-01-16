@@ -1,7 +1,9 @@
+"""urls.py ."""
 from django.conf.urls import url
-from django.contrib.staticfiles.urls import static, staticfiles_urlpatterns
+# from django.contrib.staticfiles.urls import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from .views import home, task
-from config import settings
+# from config import settings
 
 urlpatterns = [
     url(r'^$', home.main_page),
@@ -15,4 +17,4 @@ urlpatterns = [
 ]
 
 urlpatterns += staticfiles_urlpatterns()
-#urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

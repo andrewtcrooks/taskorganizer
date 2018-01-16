@@ -1,3 +1,5 @@
+"""__init.py__."""
+# flake8: noqa
 from .home import main_page
 from .home import signup
 from .home import login
