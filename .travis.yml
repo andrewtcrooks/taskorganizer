@@ -56,7 +56,7 @@ install:
   - IDJANGO=$(python ./travis.py $DJANGO)
   - pip install -q $IDJANGO
   - pip install -e .
-  - pip install -q coveralls tox-travis
+  - pip install -q coveralls tox-travis yaml
 
 before_script:
   # - mysql -e 'create database test;' -u root
