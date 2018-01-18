@@ -1,0 +1,89 @@
+language: python
+
+python:
+  # - "2.7"
+  # - "3.3"
+  # - "3.4"
+  # - "3.5"
+  - "3.6"
+
+services: 
+  # - sqlite
+  - postgresql
+  # - mysql
+
+env:
+  # - DJANGO=1.11 DB=sqlite
+  - DJANGO=1.11 DB=postgresql
+  # - DJANGO=1.11 DB=mysql
+  # - DJANGO=2.0 DB=sqlite
+  - DJANGO=2.0 DB=postgresql
+  # - DJANGO=2.0 DB=mysql
+
+matrix:
+  # fast_finish: true
+  # include:
+  #   - python: "2.7"
+  #     env: TOXENV=flake8
+  exclude:
+    # - python: "3.3"
+    #   env: DJANGO=1.11 DB=sqlite
+    - python: "3.3"
+      env: DJANGO=1.11 DB=postgresql
+    # - python: "3.3"
+    #   env: DJANGO=1.11 DB=mysql
+    # - python: "3.3"
+    #   env: DJANGO=2.0 DB=sqlite
+    - python: "3.3"
+      env: DJANGO=2.0 DB=postgresql
+    # - python: "3.3"
+    #   env: DJANGO=2.0 DB=mysql
+
+  # allow_failures:
+
+before_install:
+  - pip install -q 'flake8<3'
+  - PYFLAKES_NODOCTEST=1 flake8 tasklist
+
+install:
+  # - pip install -r requirements.txt
+  # - pip install sqlite
+  - PYTHON=`python -c 'import sys; version=sys.version_info[:3]; print("{0}.{1}".format(*version))'`
+  # - if [[ $DB == mysql ]] && [[ ${PYTHON:0:1} == "2" ]]; then pip install -q mysql-python; elif [[ $DB == mysql ]] && [[ ${PYTHON:0:1} == "3" ]]; then pip install -q mysqlclient; fi
+  # - if [[ $DB == postgresql ]]; then pip install -q psycopg2; fi
+  # - pip install -q Pillow
+  - pip install -q psycopg2
+  - IDJANGO=$(python ./travis.py $DJANGO)
+  - pip install -q $IDJANGO
+  - pip install -e .
+  - pip install -q coveralls tox-travis
+
+before_script:
+  # - mysql -e 'create database test;' -u root
+  # - mysql -e 'create database taskorganizer;'
+  - psql -c 'create database taskorganizer;' -U postgres
+
+script:
+  # - python manage.py test tests/ --pattern="tests_*.py"
+  # - django-admin.py --version
+  - tox
+  # - coverage run --source=tasklist -m py.test
+  - coverage run --source='.' manage.py test tasklist
+  - coverage report -m
+
+after_success:
+  - coveralls
+
+deploy:
+  provider: pages
+  local_dir: "./"
+  skip_cleanup: true
+  github_token: $GH_TOKEN # Set in travis-ci.org dashboard
+  target_branch: 
+  on:
+    branch: master
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change

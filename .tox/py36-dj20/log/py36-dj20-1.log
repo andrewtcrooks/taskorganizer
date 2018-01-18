@@ -1,0 +1,12 @@
+actionid: py36-dj20
+msg: getenv
+cmdargs: ['/home/travis/build/andrewtcrooks/taskorganizer/.tox/py36-dj20/bin/pip', 'install', 'Django>=2.0,<2.1', 'psycopg2']
+
+Collecting Django<2.1,>=2.0
+  Using cached Django-2.0.1-py3-none-any.whl
+Collecting psycopg2
+  Using cached psycopg2-2.7.3.2-cp36-cp36m-manylinux1_x86_64.whl
+Collecting pytz (from Django<2.1,>=2.0)
+  Using cached pytz-2017.3-py2.py3-none-any.whl
+Installing collected packages: pytz, Django, psycopg2
+Successfully installed Django-2.0.1 psycopg2-2.7.3.2 pytz-2017.3

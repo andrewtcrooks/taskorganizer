@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>Task list | {% block title %}{% endblock %}</title>
+    <style>
+        .mid{
+            display:block;
+            min-height:400px;
+            width:700px;
+        }
+        .small-div{
+            width:40%;
+            float:left;
+            padding:10px;
+        }
+        label{
+            display:block;
+            margin:10px 0;
+        }
+
+        .left{
+            border-right:1px solid #000;
+        }
+        h1 {
+            font-size: 40px;
+            float: left;
+            margin:0;
+            padding:0;
+            display:inline;
+        }
+        ul {
+            float: left;
+            padding-left: 30px;
+            list-style-type: none;
+            margin: 0;
+            display:inline;
+        }
+        ul li{
+            text-align: right;
+        }
+        div .navbar-right{
+            text-align:center;
+            float: right;
+            padding-right: 6px;
+            display:inline;
+        }
+        table tr:first-child td {
+            font-weight: bold;
+            font-size: 20px;
+            border-bottom: 1px solid #000;
+        }
+        table td:nth-child(1){
+            width: 5%;
+        }
+        table td:nth-child(2){
+            width: 70%;
+        }
+        table td:nth-child(3){
+            width: 9%;
+        }
+
+        input[type="checkbox"]{
+            margin: 0 auto;
+            display: block;
+        }
+        .submit{
+            width:8%;
+        }
+        .add{
+            width:5%;
+        }
+        input[type="submit"]{
+            margin: 0 auto;
+            display: block;
+        }
+
+        .footer{
+            margin-top:50px;
+            border-top:1px solid #000;
+        }
+        .edit_del{
+            text-align:center;
+
+         }
+        a{
+            color:black;
+        }
+        .link{
+            color:blue;
+
+        }
+
+    </style>
+    {% block head %}{% endblock %}
+</head>
+<body>
+{% block header %}{% endblock %}
+{% block content %}{% endblock %}
+<div class="footer">
+    {% block footer %}{% endblock %}
+    copyright 2017
+</div>
+</body>
+</html>

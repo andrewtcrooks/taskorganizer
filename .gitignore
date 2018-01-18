@@ -1,0 +1,13 @@
+# Travis CI
+!.travis.yml
+
+# Created by .ignore support plugin (hsz.mobi)
+/.idea/
+/secrets.json
+/taskorganizer.iml
+/config/settings/local.py
+
+# Byte-compiled / optimized / DLL files
+*.pyc
+__pycache__/
+/migrate.sh

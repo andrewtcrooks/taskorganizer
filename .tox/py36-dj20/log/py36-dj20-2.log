@@ -1,0 +1,12 @@
+actionid: py36-dj20
+msg: installpkg
+cmdargs: ['/home/travis/build/andrewtcrooks/taskorganizer/.tox/py36-dj20/bin/pip', 'install', '/home/travis/build/andrewtcrooks/taskorganizer/.tox/dist/taskorganizer-0.1.zip']
+
+Processing ./.tox/dist/taskorganizer-0.1.zip
+Building wheels for collected packages: taskorganizer
+  Running setup.py bdist_wheel for taskorganizer: started
+  Running setup.py bdist_wheel for taskorganizer: finished with status 'done'
+  Stored in directory: /home/travis/.cache/pip/wheels/92/36/8a/d221be3955df3f489948e3eee07f5e192d463d50d47df296e5
+Successfully built taskorganizer
+Installing collected packages: taskorganizer
+Successfully installed taskorganizer-0.1

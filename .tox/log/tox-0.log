@@ -1,0 +1,101 @@
+actionid: tox
+msg: packaging
+cmdargs: ['/home/travis/virtualenv/python3.6.3/bin/python', local('/home/travis/build/andrewtcrooks/taskorganizer/setup.py'), 'sdist', '--formats=zip', '--dist-dir', local('/home/travis/build/andrewtcrooks/taskorganizer/.tox/dist')]
+
+running sdist
+running egg_info
+writing taskorganizer.egg-info/PKG-INFO
+writing dependency_links to taskorganizer.egg-info/dependency_links.txt
+writing top-level names to taskorganizer.egg-info/top_level.txt
+reading manifest file 'taskorganizer.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no files found matching 'LICENSE'
+warning: no files found matching 'README.rst'
+warning: no files found matching '*' under directory 'docs'
+writing manifest file 'taskorganizer.egg-info/SOURCES.txt'
+running check
+creating taskorganizer-0.1
+creating taskorganizer-0.1/config
+creating taskorganizer-0.1/config/settings
+creating taskorganizer-0.1/tasklist
+creating taskorganizer-0.1/tasklist/app
+creating taskorganizer-0.1/tasklist/app/migrations
+creating taskorganizer-0.1/tasklist/app/views
+creating taskorganizer-0.1/tasklist/static
+creating taskorganizer-0.1/tasklist/templates
+creating taskorganizer-0.1/taskorganizer.egg-info
+copying files to taskorganizer-0.1...
+copying MANIFEST.in -> taskorganizer-0.1
+copying README.md -> taskorganizer-0.1
+copying setup.py -> taskorganizer-0.1
+copying config/__init__.py -> taskorganizer-0.1/config
+copying config/urls.py -> taskorganizer-0.1/config
+copying config/wsgi.py -> taskorganizer-0.1/config
+copying config/settings/__init__.py -> taskorganizer-0.1/config/settings
+copying config/settings/base.py -> taskorganizer-0.1/config/settings
+copying config/settings/production.py -> taskorganizer-0.1/config/settings
+copying config/settings/staging.py -> taskorganizer-0.1/config/settings
+copying config/settings/test.py -> taskorganizer-0.1/config/settings
+copying tasklist/__init__.py -> taskorganizer-0.1/tasklist
+copying tasklist/app/__init__.py -> taskorganizer-0.1/tasklist/app
+copying tasklist/app/admin.py -> taskorganizer-0.1/tasklist/app
+copying tasklist/app/apps.py -> taskorganizer-0.1/tasklist/app
+copying tasklist/app/forms.py -> taskorganizer-0.1/tasklist/app
+copying tasklist/app/models.py -> taskorganizer-0.1/tasklist/app
+copying tasklist/app/tests.py -> taskorganizer-0.1/tasklist/app
+copying tasklist/app/urls.py -> taskorganizer-0.1/tasklist/app
+copying tasklist/app/migrations/0001_initial.py -> taskorganizer-0.1/tasklist/app/migrations
+copying tasklist/app/migrations/__init__.py -> taskorganizer-0.1/tasklist/app/migrations
+copying tasklist/app/views/__init__.py -> taskorganizer-0.1/tasklist/app/views
+copying tasklist/app/views/home.py -> taskorganizer-0.1/tasklist/app/views
+copying tasklist/app/views/task.py -> taskorganizer-0.1/tasklist/app/views
+copying tasklist/static/default.png -> taskorganizer-0.1/tasklist/static
+copying tasklist/templates/add_task.html -> taskorganizer-0.1/tasklist/templates
+copying tasklist/templates/base.html -> taskorganizer-0.1/tasklist/templates
+copying tasklist/templates/edit_task.html -> taskorganizer-0.1/tasklist/templates
+copying tasklist/templates/home.html -> taskorganizer-0.1/tasklist/templates
+copying tasklist/templates/index.html -> taskorganizer-0.1/tasklist/templates
+copying taskorganizer.egg-info/PKG-INFO -> taskorganizer-0.1/taskorganizer.egg-info
+copying taskorganizer.egg-info/SOURCES.txt -> taskorganizer-0.1/taskorganizer.egg-info
+copying taskorganizer.egg-info/dependency_links.txt -> taskorganizer-0.1/taskorganizer.egg-info
+copying taskorganizer.egg-info/top_level.txt -> taskorganizer-0.1/taskorganizer.egg-info
+Writing taskorganizer-0.1/setup.cfg
+creating .tox/dist
+creating '.tox/dist/taskorganizer-0.1.zip' and adding 'taskorganizer-0.1' to it
+adding 'taskorganizer-0.1/MANIFEST.in'
+adding 'taskorganizer-0.1/README.md'
+adding 'taskorganizer-0.1/setup.py'
+adding 'taskorganizer-0.1/PKG-INFO'
+adding 'taskorganizer-0.1/setup.cfg'
+adding 'taskorganizer-0.1/config/__init__.py'
+adding 'taskorganizer-0.1/config/urls.py'
+adding 'taskorganizer-0.1/config/wsgi.py'
+adding 'taskorganizer-0.1/config/settings/__init__.py'
+adding 'taskorganizer-0.1/config/settings/base.py'
+adding 'taskorganizer-0.1/config/settings/production.py'
+adding 'taskorganizer-0.1/config/settings/staging.py'
+adding 'taskorganizer-0.1/config/settings/test.py'
+adding 'taskorganizer-0.1/tasklist/__init__.py'
+adding 'taskorganizer-0.1/tasklist/app/__init__.py'
+adding 'taskorganizer-0.1/tasklist/app/admin.py'
+adding 'taskorganizer-0.1/tasklist/app/apps.py'
+adding 'taskorganizer-0.1/tasklist/app/forms.py'
+adding 'taskorganizer-0.1/tasklist/app/models.py'
+adding 'taskorganizer-0.1/tasklist/app/tests.py'
+adding 'taskorganizer-0.1/tasklist/app/urls.py'
+adding 'taskorganizer-0.1/tasklist/app/migrations/0001_initial.py'
+adding 'taskorganizer-0.1/tasklist/app/migrations/__init__.py'
+adding 'taskorganizer-0.1/tasklist/app/views/__init__.py'
+adding 'taskorganizer-0.1/tasklist/app/views/home.py'
+adding 'taskorganizer-0.1/tasklist/app/views/task.py'
+adding 'taskorganizer-0.1/tasklist/static/default.png'
+adding 'taskorganizer-0.1/tasklist/templates/add_task.html'
+adding 'taskorganizer-0.1/tasklist/templates/base.html'
+adding 'taskorganizer-0.1/tasklist/templates/edit_task.html'
+adding 'taskorganizer-0.1/tasklist/templates/home.html'
+adding 'taskorganizer-0.1/tasklist/templates/index.html'
+adding 'taskorganizer-0.1/taskorganizer.egg-info/PKG-INFO'
+adding 'taskorganizer-0.1/taskorganizer.egg-info/SOURCES.txt'
+adding 'taskorganizer-0.1/taskorganizer.egg-info/dependency_links.txt'
+adding 'taskorganizer-0.1/taskorganizer.egg-info/top_level.txt'
+removing 'taskorganizer-0.1' (and everything under it)

@@ -1,0 +1,8 @@
+actionid: py36-dj20
+msg: envreport
+cmdargs: ['/home/travis/build/andrewtcrooks/taskorganizer/.tox/py36-dj20/bin/pip', 'freeze']
+
+Django==2.0.1
+psycopg2==2.7.3.2
+pytz==2017.3
+taskorganizer==0.1

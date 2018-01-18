@@ -1,0 +1,9 @@
+actionid: py36-dj20
+msg: getenv
+cmdargs: ['/home/travis/virtualenv/python3.6.3/bin/python', '-m', 'virtualenv', '--python', '/home/travis/virtualenv/python3.6.3/bin/python3.6', 'py36-dj20']
+
+Using real prefix '/opt/python/3.6.3'
+New python executable in /home/travis/build/andrewtcrooks/taskorganizer/.tox/py36-dj20/bin/python3.6
+Also creating executable in /home/travis/build/andrewtcrooks/taskorganizer/.tox/py36-dj20/bin/python
+Installing setuptools, pip, wheel...done.
+Running virtualenv with interpreter /home/travis/virtualenv/python3.6.3/bin/python3.6
